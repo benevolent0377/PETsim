@@ -1,6 +1,6 @@
 # PETsim
 
-**P**remier **E**lectronic **T**erminal (based) simulator (for digital, text-based pets).
+**P**remier **E**lectronic **T**erminal-based simulator for digital, text-based pets.
 
 ---
 
