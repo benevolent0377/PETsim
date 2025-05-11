@@ -3,6 +3,8 @@ import math, random
 day = 1
 hour = 1
 
+jobs = [{"name": "Derryl's Home Repair", "wage": 350, "hours": 6, "accept-rate": 100}, {"name": "Lacy-Lue-Sue's Hair Salon", "wage": 500, "hours": 3, "accept-rate": 25}]
+
 class Dog:
     
     def __init__(self, breed, color):
@@ -14,10 +16,12 @@ class Dog:
         self.happiness = 5
         self.sleepiness = 0
         self.anxiety = 0
-
+    
+    @name.setter
     def rename(self, name):
         self.name = name
-
+    
+    @trick.setter
     def teachATrick(self, trick):
 
         if(self.hasEnergy(-7)):
@@ -118,9 +122,17 @@ class Owner:
         self.employed = False
 
     def work(self, job):
-        self.
+        if hasTime():
+            if (self.employed):
+                pass
+            else:
+                print("You need a job to go to work.")
+    def shop(self):
+        if hasTime():
+            pass
+        pass
 
-    def sleep(self):
+    def playerSleep(self):
 
         global day
         global hour
@@ -139,23 +151,10 @@ def hasTime():
     global hour
 
     if hour > 16:
+        print("It's too late in the day to do that! You should sleep.")
         return False
     else:
         return True
 
-dog1 = Dog("Terrier", "brown")
-dog1.rename("Tommy")
-dog2 = Dog("Rotweiler", "spotted-white")
-dog2.rename("Laurel")
-
-dog1.checkUp()
-
-dog1.feed()
-
-dog1.teachATrick("Jump")
-
-dog1.checkUp()
-
-dog1.sleep()
-
-dog1.checkUp()
+for job in jobs:
+    print(job)
